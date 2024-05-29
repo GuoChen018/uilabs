@@ -1,0 +1,147 @@
+:root {
+    /* h6, caption  */
+    --font-size-small: clamp(0.813rem, 0.063vw + 0.8rem, 0.875rem);
+
+    /* paragraph  */
+    --font-size-medium: 1rem;
+
+    /* h3 */
+    --font-size-large: clamp(1rem, 0.25vw + 1rem, 1.25rem);
+
+    /* h2 */
+    --font-size-xlarge: clamp(1.25rem, 0.5vw + 1.15rem, 1.75rem);
+
+    /* h1 */
+    --font-size-xxlarge: clamp(1.25rem, 1.75vw + 0.9rem, 3rem);
+
+    --border: #ebebeb;
+
+}
+
+@font-face {
+    font-family: 'CommitMono';
+    src: url('font/CommitMono-400-Regular.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RainyHearts';
+    src: url('font/rainyhearts.ttf') format('ttf');
+    font-weight: medium;
+    font-style: normal;
+}
+
+h1 {
+    font-size: var(--font-size-xxlarge);
+    margin: 0;
+    font-family: 'RainyHearts', sans-serif;
+    font-weight: normal;
+    color: #121212;
+    margin-bottom: 0.25rem;
+}
+
+h3 {
+    font-size: var(--font-size-large);
+    margin: 0;
+    font-family: 'RainyHearts', sans-serif;
+    font-weight: normal;
+    color: #323232;
+    margin-bottom: 1rem;
+}
+
+h6 {
+    font-size: var(--font-size-small);
+    margin: 0;
+    font-family: 'CommitMono', sans-serif;
+    font-weight: normal;
+    color: #929292;
+    margin: 0;
+}
+
+p {
+    font-size: var(--font-size-small);
+    margin: 0;
+    font-family: 'CommitMono', sans-serif;
+    font-weight: normal;
+    color: #434343;
+}
+
+.project-item-description > a {
+    font-size: var(--font-size-small);
+    margin: 0;
+    font-family: 'CommitMono', sans-serif;
+    font-weight: normal;
+    color: #434343;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0.75rem 1rem 0 1rem;
+}
+
+ul {
+    list-style-type: none; /* Removes bullets from lists */
+    padding: 0; /* Removes padding */
+    margin: 0; /* Removes margin */
+    /* display: flex;
+    flex-direction: row;
+    align-items: center; */
+}
+
+.project-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-flow: row dense;
+    
+}
+    
+.project-column {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+} 
+
+.project-item {
+    border: 1px solid var(--border);
+    margin-top: -1px;
+    margin-left: -1px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-item img {
+    transition: transform 0.3s ease;
+}
+
+.project-item a[href]::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease;
+}
+
+.project-item:hover img {
+    transform: scale(1.05);
+}
+
+.project-item-description {
+    width: 100%;
+    display: flex; 
+    justify-content: space-between;
+    padding: 0.5rem 0.75rem;
+    box-sizing: border-box;
+
+}
+
+img {
+    width: 100%;
+}
