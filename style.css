@@ -20,7 +20,7 @@
 
 @font-face {
     font-family: 'CommitMono';
-    src: url('font/CommitMono-400-Regular.otf') format('otf');
+    src: url('font/CommitMono-400-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
