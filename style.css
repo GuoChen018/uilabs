@@ -27,7 +27,7 @@
 
 @font-face {
     font-family: 'RainyHearts';
-    src: url('font/rainyhearts.ttf') format('ttf');
+    src: url('font/rainyhearts.ttf') format('truetype');
     font-weight: medium;
     font-style: normal;
 }
